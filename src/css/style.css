@@ -3,8 +3,10 @@ body {
     height: 100vh;
     max-width: 1440px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
+/* Inicio: Header */
 .container-header {
     display: flex;
     justify-content: center;
@@ -31,6 +33,100 @@ body {
     vertical-align: middle;
     color: #E5E5E5;
 }
+/* Fim: Header */
+
+/* Inicio: conteudo */
+.container-conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 70px;
+    width: 95%;
+    margin: 50px auto;
+}
+
+.container-produtos{
+    width: 65%;
+    background-color: burlywood;
+}
+
+.container-adicionar-produto {
+    width: 35%;
+}
+
+.titulo {
+    font-family: var(--fonte-titulo);
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    line-height: 100%;
+    margin: 40px auto;
+}
+
+.container-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.input-form {
+    width: 392px;
+    height: 58px;
+    border-radius: 30px;
+    border: 3px solid var(--cor-forms);
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.input-form::placeholder {
+    font-family: var(--fonte-texto);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--cor-forms);
+}
+
+.input-form:focus {
+    outline: none;
+    border: 3px solid var(--cor-forms);
+    font-family: var(--fonte-texto);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--cor-forms);
+}
+
+.container-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+}
+
+.btn-guardar, .btn-limpar {
+    width: 188px;
+    height: 55px;
+    font-family: var(--fonte-texto);
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 15px;
+    border: 3px solid var(--cor-forms);
+    padding: 0px;
+}
+
+.btn-guardar {
+    color: #FFFFFF;
+    background-color: var(--cor-forms);
+}
+
+.btn-limpar {
+    color: var(--cor-forms)
+}
+
+
+/* Fim: conteudo */
 
 /* Responsividade 380px */
 @media (max-width: 380px) {
