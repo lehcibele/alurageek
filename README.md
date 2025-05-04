@@ -1,4 +1,4 @@
-# 🎮 alurageek
+# 🎮 aluraGeek
 
 ## 📌 Sobre o Projeto
 > O **AluraGeek** é um projeto desenvolvido com o objetivo de praticar e aprofundar meus conhecimentos em HTML, CSS e JavaScript, além de aplicar conceitos de responsividade, versionamento de código com Git, e deploy com GitHub Pages.
@@ -38,7 +38,7 @@ Caso deseje clonar e rodar este projeto na sua máquina local, siga os passos:
 ## 🌐 Deploy
 
 Este projeto está hospedado no GitHub Pages. Você pode acessá-lo através do link:
-    
+
 
 ## 📝 Licença
 
