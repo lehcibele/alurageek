@@ -46,12 +46,78 @@ body {
 }
 
 .container-produtos{
-    width: 65%;
-    background-color: burlywood;
+    width: 53%;
 }
 
-.container-adicionar-produto {
-    width: 35%;
+.container-lista-protudos {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-height: 550px;
+    box-shadow: -12px 10px 5.8px rgba(0, 0, 0, 0.25);
+    overflow-y: scroll;
+}
+
+.card {
+    box-sizing: border-box;
+    background: #5D04D9;
+    border: 3px solid #000000;
+    box-shadow: -5px 6px 3.3px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+   /* max-width: 196px;
+    max-height: 258px; */
+    padding: 10px;
+}
+
+.card-img {
+    width: 176px;
+    height: 174px;
+    border-radius: 10px;
+    border: 3px solid #000000;
+    
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.card-titulo-produto {
+    margin: 10px auto;
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.card-container-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-preco-produto {
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.card-icon-lixeira {
+    width: 24px;
+    height: 24px;
+}
+
+.card-icon-lixeira img {
+    width: 100%;
+    height: 100%;
 }
 
 .titulo {
