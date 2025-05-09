@@ -124,6 +124,13 @@ body {
     height: 100%;
 }
 
+.mensagem-card-vazio {
+    text-align: center;
+    font-family: var(--fonte-texto);
+    font-size: 24px;
+    line-height: 1.5;
+}
+
 /* Fim: Lista de produtos */
 
 .titulo {

@@ -10,7 +10,12 @@ const containerListaProdutos = document.getElementById('container-lista-protudos
 let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
 
 window.addEventListener('DOMContentLoaded', () => {
-    produtos.forEach(produto => criarCardProduto(produto));
+    if(produtos.length == 0) {
+        verificarSeTemProdutos();
+    } else {
+        produtos.forEach(produto => criarCardProduto(produto));
+    }
+    
 });
 
 formulario.addEventListener('submit', guardarProdutos);
@@ -18,13 +23,12 @@ formulario.addEventListener('submit', guardarProdutos);
 function guardarProdutos(event) {
     event.preventDefault();
 
-
-
     const nomeProduto = inputNomeProduto.value;
     const precoProduto = parseFloat(inputPrecoProduto.value).toFixed(2);
     const imagemProduto = inputImagemProduto.value;
 
     const novoProduto = {
+        id: Date.now(),
         nomeProduto,
         precoProduto,
         imagemProduto
@@ -38,7 +42,31 @@ function guardarProdutos(event) {
     // chama a função que cria o produto e exibi na tela
     criarCardProduto(novoProduto);
 
+    verificarSeTemProdutos();
+
     formulario.reset(); // limpa o formulario
+}
+
+function verificarSeTemProdutos() {
+    const mensagemExistente = document.querySelector('.mensagem-card-vazio');
+
+    if (produtos.length === 0) {
+        // Se não houver mensagem, adiciona
+        if (!mensagemExistente) {
+            const mensagem = document.createElement('div');
+            mensagem.classList.add('mensagem-card-vazio');
+            mensagem.innerHTML = `
+                <h1>Nenhum produto adicionado</h1>
+                <p>Adicione um produto!</p>
+            `;
+            containerListaProdutos.appendChild(mensagem);
+        }
+    } else {
+        // Se existir uma mensagem, remove
+        if (mensagemExistente) {
+            mensagemExistente.remove();
+        }
+    }
 }
 
 function criarCardProduto(produto) {
@@ -60,5 +88,27 @@ function criarCardProduto(produto) {
         </div>
     `;
 
+    const iconLixeira = card.querySelector('#card-icon-lixeira')
+    iconLixeira.addEventListener('click', () => {
+        excluirCard(produto.id, card);
+    });
+
     containerListaProdutos.appendChild(card);
+}
+
+function excluirCard(id, card) {
+    // Remove o card do DOM
+    card.remove();
+
+    // Remove do localStorage
+    produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+
+    const novaLista = produtos.filter(produto => produto.id !== id);
+
+    localStorage.setItem('produtos', JSON.stringify(novaLista));
+
+    produtos = novaLista;
+
+    verificarSeTemProdutos();
+
 }
