@@ -4,6 +4,7 @@
 > O **AluraGeek** é um projeto desenvolvido com o objetivo de praticar e aprofundar meus conhecimentos em HTML, CSS e JavaScript, além de aplicar conceitos de responsividade, versionamento de código com Git, e deploy com GitHub Pages.
 
 O site permite que o usuário preencha um formulário com nome do produto, valor e imagem. Ao clicar em "Guardar", um novo card com essas informações é exibido na tela. Cada card possui um botão para excluir o produto da lista.
+Os dados são salvos no localStorage, permitindo que os produtos adicionados permaneçam na tela mesmo após atualizar ou fechar o navegador.
 
 >[Link do Mockup](https://www.figma.com/design/1zm3NNIw4KcI0RQtR6UmqK/New-AluraGeek---PT?node-id=14-123&t=5YbJSW5MOPQyPPkm-0)
 
@@ -19,6 +20,7 @@ O site permite que o usuário preencha um formulário com nome do produto, valor
 - Manipulação do DOM com JavaScript
 - Criação dinâmica de elementos HTML
 - Estruturação semântica com HTML
+- Armazenamento de dados com localStorage
 - Estilização responsiva com CSS (Media Queries)
 - Versionamento de código com Git e GitHub
 - Deploy de projetos via GitHub Pages
@@ -38,7 +40,8 @@ Caso deseje clonar e rodar este projeto na sua máquina local, siga os passos:
 ## 🌐 Deploy
 
 Este projeto está hospedado no GitHub Pages. Você pode acessá-lo através do link:
-
+    
+    https://lehcibele.github.io/alurageek/
 
 ## 📝 Licença
 
